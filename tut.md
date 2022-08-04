@@ -1,0 +1,2 @@
+- [html pages](https://stackoverflow.com/questions/70042979/why-does-javascript-vite-js-multi-page-app-fail-on-build)
+- [multipage](https://stackoverflow.com/questions/70042979/why-does-javascript-vite-js-multi-page-app-fail-on-build)
