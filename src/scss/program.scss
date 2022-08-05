@@ -1,1 +1,119 @@
 @import "./config";
+
+#program-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  //   grid-template-rows: 15% 100%;
+  grid-template-areas:
+    "fow program"
+    "sect sect";
+  align-items: center;
+}
+#program-fow {
+  grid-area: fow;
+}
+#program-heading {
+  grid-area: program;
+  background-color: #367179;
+  color: white;
+}
+
+#program-body {
+  grid-area: sect;
+  //   border: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 60px;
+  padding: 50px 0px 100px 0px;
+  column-gap: 100px;
+  margin: auto;
+  justify-content: center;
+}
+
+#program-card {
+  width: 280px;
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .line {
+      background: #0d3841;
+      height: 2px;
+      width: 90%;
+    }
+    .card-date {
+      color: #133d46;
+      padding-top: 3px;
+      font-size: 14px;
+      margin: 3px 0px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 275px;
+
+    figure {
+      background: #fff;
+      height: 200px;
+      width: 250px;
+      margin: 2px 0px;
+      overflow: hidden;
+      img {
+        object-fit: cover;
+        height: 200px;
+        width: 250px;
+      }
+    }
+    .card-title {
+      font-weight: bold;
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+    .card-desc {
+      font-weight: 100;
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+    .btn-register {
+      background-color: #33abbc;
+      color: #fff;
+      padding: 9px 32px;
+      font-size: 18px;
+      border: none;
+      font-weight: 300;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #program-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #program-grid {
+    display: block;
+  }
+  #program-grid {
+    display: block;
+    p {
+      font-size: 1.5em;
+    }
+  }
+  #program-heading {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+  }
+}
