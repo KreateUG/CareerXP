@@ -1,0 +1,39 @@
+@font-face {
+  font-family: NueHaasRegular;
+  src: url(../assets/fonts/Neue-Haas-Regular.ttf);
+}
+
+@font-face {
+  font-family: NueHaasMedium;
+  src: url(../assets/fonts/Neue-Haas-Medium.ttf);
+}
+@font-face {
+  font-family: NueHaasBold;
+  src: url(../assets/fonts/Neue-Haas-Bold.ttf);
+}
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  display: inherit;
+}
+h3 {
+  margin-left: 1em;
+  font-size: xxx-large;
+  font-family: NueHaasRegular, sans-serif;
+  font-weight: 300;
+}
+h2 {
+  margin-left: 1em;
+  font-size: xx-large;
+  font-family: NueHaasRegular, sans-serif;
+  font-weight: 300;
+}
+h4 {
+  margin-left: 1em;
+  font-size: large;
+  font-family: NueHaasRegular, sans-serif;
+  font-weight: 300;
+}
