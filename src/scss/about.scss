@@ -2,18 +2,53 @@
 
 #about-grid {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 15vh 85vh;
+  grid-template-areas:
+    "fow about"
+    "sect sect";
   align-items: center;
+  // height: 85vh;
+}
+#about-fow {
+  grid-area: fow;
 }
 #about-heading {
+  grid-area: about;
   background-color: #367179;
   color: white;
 }
 #about-body {
+  grid-area: sect;
   display: grid;
-  grid-template-columns: 50% 50%;
-  align-items: center;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "box1 box2"
+    "box3 box4";
+}
+.box3 {
+  grid-area: box2;
+}
+.box2 {
+  grid-area: box3;
+}
+
+#about-grid {
+  section {
+    padding-left: 25px;
+    display: flex;
+  }
+  p {
+    font-size: 1.75em;
+    font-family: NueHaasRegular, sans-serif;
+    font-weight: 200;
+  }
 }
 
 @media screen and (max-width: 800px) {
+  #about-body {
+    display: block;
+  }
 }
