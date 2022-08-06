@@ -127,7 +127,8 @@
   color: white;
   font-family: NueHaasRegular, sans-serif;
 }
-.footer-speaker {
+.footer-speaker,
+#footer-home {
   position: fixed;
   bottom: 0;
   width: 100vw;
@@ -199,6 +200,7 @@
     transform: rotate(0deg);
   }
 }
+
 // media queries
 
 @media screen and (max-width: 800px) {
