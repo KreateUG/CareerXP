@@ -52,6 +52,27 @@
   background-color: #5cbcc9;
 }
 
+#speaker-body {
+  display: grid;
+  #speaker-cell {
+    display: grid;
+    grid-template-columns: 52% 48%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      #speaker-1-grid-cell {
+        background-color: #0d3841;
+        color: #33abbc;
+      }
+      #speaker-1-details-grid-cell {
+        background-color: #0d3841;
+        color: #33abbc;
+      }
+    }
+  }
+}
+
 #speakers-grid {
   display: grid;
   grid-template-columns: auto auto;
@@ -60,6 +81,10 @@
 #speakers-heading {
   background-color: #367179;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
 }
 .speaker-details-grid-cell {
   display: grid;
@@ -71,13 +96,13 @@
   height: 4em;
 }
 #speaker-1-image {
-  background-image: url(../assets/images//richard.jpg);
+  background-image: url(../assets/images/speakers/richard.jpg);
 }
 #speaker-2-image {
-  background-image: url(../assets/images/fridah.jpg);
+  background-image: url(../assets/images/speakers/stella.jpg);
 }
 #speaker-3-image {
-  background-image: url(../assets/images/famous.jpg);
+  background-image: url(../assets/images/speakers/crystal.jpeg);
 }
 #speaker-4-image {
   background-image: url(../assets/images/emily.jpg);
@@ -89,14 +114,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-#speaker-1-grid-cell {
-  background-color: #0d3841;
-  color: #33abbc;
-}
-#speaker-1-details-grid-cell {
-  background-color: #0d3841;
-  color: #33abbc;
-}
+
 #footer {
   position: relative;
   width: 100vw;
@@ -105,6 +123,28 @@
   text-align: center;
   color: white;
   font-family: NueHaasRegular, sans-serif;
+}
+.footer-speaker {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 10vh;
+  background-color: #0f4751;
+  text-align: center;
+  color: white;
+  font-family: NueHaasRegular, sans-serif;
+
+  li {
+    display: inline;
+  }
+  a {
+    color: white;
+    position: relative;
+  }
+  img {
+    position: relative;
+    height: 36px;
+  }
 }
 #footer li {
   display: inline;
@@ -123,6 +163,40 @@
   align-items: center;
   padding-top: 5px;
 }
+
+// close button
+.back-button {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  // border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .bar,
+  .bar2 {
+    position: absolute;
+    height: 2px;
+    background: white;
+    width: 60%;
+    transition: all 0.3s ease-in-out;
+  }
+  .bar {
+    transform: rotate(45deg);
+  }
+  .bar2 {
+    transform: rotate(-45deg);
+  }
+  &:hover .bar2,
+  &:hover .bar {
+    transform: rotate(0deg);
+  }
+}
+// media queries
 
 @media screen and (max-width: 800px) {
   #home-grid {

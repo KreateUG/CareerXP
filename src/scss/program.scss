@@ -16,6 +16,10 @@
   grid-area: program;
   background-color: #367179;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
 }
 
 #program-body {
@@ -96,6 +100,7 @@
   font-family: NueHaasRegular, sans-serif;
   border: none;
   font-weight: 300;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {

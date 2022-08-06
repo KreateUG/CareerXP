@@ -17,6 +17,10 @@
   grid-area: about;
   background-color: #367179;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
 }
 #about-body {
   grid-area: sect;
