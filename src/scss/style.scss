@@ -57,6 +57,8 @@
   #speaker-cell {
     display: grid;
     grid-template-columns: 52% 48%;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 
@@ -86,6 +88,7 @@
   justify-content: space-between;
   padding-right: 10px;
 }
+
 .speaker-details-grid-cell {
   display: grid;
   grid-template-columns: 70% 30%;
@@ -230,5 +233,8 @@
     text-align: left;
     margin-left: 1em;
     row-gap: 1em;
+  }
+  #speakers-grid {
+    grid-template-columns: 1fr;
   }
 }
